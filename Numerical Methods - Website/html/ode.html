@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ordinary Differential Equations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../images/programmer.png">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="../images/logo.png" width="80px" height="45px" alt="logo-img"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="methods.html">Methods</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Tutorials
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLZoTAELRMXVNUL99R4bDlVYsncUNvwUBB" target="_blank">Python</a></li>
+                    <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLjVLYmrlmjGfdIlwG649bdzVHM4iLbD_H" target="_blank">Matlab</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://colab.research.google.com/" target="_blank">Google Colab</a>  </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Upgrade to Pro</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+
+    <!-- <h3 style="font-size: 30px; text-align:center">ODE Equations</h3> -->
+
+    <div class="container my-4">
+        <div class="card mb-3" style="max-width: auto; ">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../images/euler.jpg" class="img-fluid rounded-start" alt="bisection-algo-img">
+                </div>
+                <div class="col-md-8  bg-success p-2" style="--bs-bg-opacity: .1;">
+                    <div class="card-body flex-column d-flex algo-content ">
+                        <h4 class="card-title">Euler's Algorithm</h4>
+                 
+                        <ul>
+                        <li>Start </li>
+                          <li>Define function f(x,y)</li>
+                          <li> Read values of initial condition(x0 and y0), 
+                            number of steps (n) and calculation point (xn)</li>
+                          <li>Calculate step size (h) = (xn - x0)/b</li>
+                          <li>Set i=0</li>
+                          <li>Loop 
+                                
+                            yn = y0 + h *  f(x0 + i*h, y0) 
+                            
+                            y0 = yn
+                            
+                            i = i + 1
+                      
+                         While i < n</li>
+                          <li>Display yn as result</li>
+                          <li>Stop</li>
+
+                        </ul>
+                        <ul>The Euler method is a first-order method, which means that the local error (error per step) is proportional to the square of the step size, and the global error (error at a given time) is proportional to the step size.</ul>
+                        </p>
+                        <a href="https://atozmath.com/CONM/RungeKutta.aspx" target="_blank"
+                            class="btn btn-outline-primary align-self-center btn-lg mx-auto ">Calculate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://gist.github.com/RushikeshKothawade07/bfc8630c8c3eaead7e16e9a2df2abf78.js"></script>    <!-- //2nd -->
+    <div class="container my-4">
+        <div class="card mb-3" style="max-width: auto; ">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../images/rk.jpg" class="img-fluid rounded-start" alt="nrm-algo-img">
+                </div>
+                <div class="col-md-8  bg-success p-2" style="--bs-bg-opacity: .1;">
+                    <div class="card-body flex-column d-flex algo-content ">
+                        <h4 class="card-title">Runge Kutta 4th order Algorithm</h4>
+                        
+                        <ul>
+                          <li>Start</li>
+                          <li>Define function f(x,y)</li>
+                          <li>Read values of initial condition(x0 and y0), 
+                            number of steps (n) and calculation point (xn)</li>
+                          <li>Calculate step size (h) = (xn - x0)/n</li>
+                          <li>Set i=0</li>
+                          <li>Loop 
+                                
+                            k1 = h * f(x0, y0)
+                            k2 = h * f(x0+h/2, y0+k1/2)
+                            k3 = h * f(x0+h/2, y0+k2/2)
+                            k4 = h * f(x0+h, y0+k3)
+                            
+                            k = (k1+2*k2+2*k3+k4)/6
+                            
+                            yn = y0 + k
+                            
+                            i = i + 1
+                            x0 = x0 + h
+                            y0 = yn
+                            
+                         While i < n
+                      </li>
+                          <li>Display yn as result</li>
+                          <li>Stop</li>
+
+                        </ul>
+                        <ul>The Runge-Kutta method finds an approximate value of y for a given x. Only first-order ordinary differential equations can be solved by using the Runge Kutta 2nd order method.</ul>
+
+                        </p>
+                        <a href="https://keisan.casio.com/exec/system/1222997077" target="_blank"
+                            class="btn btn-outline-primary align-self-center btn-lg mx-auto ">Calculate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://gist.github.com/RushikeshKothawade07/2b193c368fce814dedec5d0489cfdea3.js"></script>     
+    <script src="index.js"></script>
+</body>
+
+</html>

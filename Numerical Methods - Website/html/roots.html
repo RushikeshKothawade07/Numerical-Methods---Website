@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Roots of Equations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../images/programmer.png">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="../images/logo.png" width="80px" height="45px" alt="logo-img"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="methods.html">Methods</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Tutorials
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLZoTAELRMXVNUL99R4bDlVYsncUNvwUBB" target="_blank">Python</a></li>
+                      <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLjVLYmrlmjGfdIlwG649bdzVHM4iLbD_H" target="_blank">Matlab</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://colab.research.google.com/" target="_blank">Google Colab</a>  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Upgrade to Pro</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+    <!-- Bisection code  -->
+
+    <!-- <h3 style="font-size: 30px; text-align:center">bisection Equations</h3> -->
+
+    <div class="container my-4">
+        <div class="card mb-3" style="max-width: auto; ">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../images/bsm-1.png" class="img-fluid rounded-start" alt="bisection-algo-img">
+                </div>
+                <div class="col-md-8  bg-success p-2" style="--bs-bg-opacity: .1;">
+                    <div class="card-body flex-column d-flex algo-content ">
+                        <h4 class="card-title">Bisection Algorithm</h4>
+                        <p class="card-text">For any continuous function f(x), <br>
+                        <ul>
+                            <li>Find two points, say a and b such that a < b and f(a) x f(b) < 0 </li>
+                            <li>Find the midpoint of a and b, say 't'</li>
+                            <li>'t' is the root of the given function if f(t)=0;</li>
+                            <li>else follow the next step Divide the interval[a, b]</li>
+                            <li>If f(t) x f(a) < 0, there exist a root between 't' and 'a' , else if f(t) x f(b) < 0,
+                                    there exist a root between 't' and 'b' Repeat above three steps until f(t)=0.</li>
+                        </ul>
+                        <ul>The bisection method is an approximation method to find the roots of the given equation by
+                            repeatedly dividing the interval. This method will divide the interval until the resulting
+                            interval is found, which is extremely small.</ul>
+
+                        </p>
+                        <a href="https://atozmath.com/CONM/Bisection.aspx" target="_blank"
+                            class="btn btn-outline-primary align-self-center btn-lg mx-auto ">Calculate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://gist.github.com/RushikeshKothawade07/d298acec21597ebe3880e154ccaffe54.js"></script>
+
+    <!-- //2nd -->
+    <div class="container my-4">
+        <div class="card mb-3" style="max-width: auto; ">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../images/nrm-flowchart.png" class="img-fluid rounded-start" alt="nrm-algo-img">
+                </div>
+                <div class="col-md-8  bg-success p-2" style="--bs-bg-opacity: .1;">
+                    <div class="card-body flex-column d-flex algo-content ">
+                        <h4 class="card-title">Newton Rapson Algorithm</h4>
+                        <p class="card-text"><br>
+                        <ul>
+                            <li>1. Define function as f(x) </li>
+                            <li>2. Define first derivative of f(x) as g(x) </li>
+                            <li>3. Input initial guess (x0), tolerable error (e) and maximum iteration (N)</li>
+                            <li>4. Initialize iteration counter i = 1</li>
+                            <li>5. If g(x0) = 0 then print "Mathematical Error" and goto (12) otherwise goto (7) </li>
+                            <li>6. Calcualte x1 = x0 - f(x0) / g(x0)</li>
+                            <li>7. Increment iteration counter i = i + 1</li>
+                            <li>8. If i >= N then print "Not Convergent" and goto (11) otherwise goto (9) </li>
+                            <li>9. If |f(x1)| > e then set x0 = x1 and goto (5) otherwise goto (10)</li>
+                            <li>Print root as x1</li>
+                        </ul>
+                        <ul>Newton Raphson Method is an open method and starts with one initial guess for finding real root of non-linear equations.</ul>
+                        </p>
+                        <a href="https://atozmath.com/CONM/Bisection.aspx?q=nr" target="_blank"
+                            class="btn btn-outline-primary align-self-center btn-lg mx-auto ">Calculate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://gist.github.com/RushikeshKothawade07/d018422e937f6501870222df73499bb3.js"></script>
+
+  
+       <!-- //3rd -->
+       <div class="container my-4">
+        <div class="card mb-3" style="max-width: auto; ">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../images/sam-1.png" class="img-fluid rounded-start" alt="nrm-algo-img">
+                </div>
+                <div class="col-md-8  bg-success p-2" style="--bs-bg-opacity: .1;">
+                    <div class="card-body flex-column d-flex algo-content ">
+                        <h4 class="card-title">Fixed Point Iteration Algorithm</h4>
+                        <p class="card-text"><br>
+                        <ul>
+                            <li>Choose the initial value x0</li>
+                            <li>to choose x0 is to find the values x = a and x = b for which f(a) < 0 and f(b) > 0 </li>
+                            <li>To narrow down the selection of a and b, take xo as the average of a and b.</li>
+                            <li>Express in the form x = g(x) such that |g’(x)| < 1 at x = x0</li>
+                            <li>choose the g(x) which has the minimum value of g’(x) at x = x0</li>
+                            <li>applying the successive approximations xn = g(xn – 1)</li>
+                            <li>if f is a continuous function, we get a sequence of {xn} which converges to a point l0, which is the approximate solution of the given equation.</li>
+                           
+                        </ul>
+                        <ul>The method is useful for finding the real roots of the equation, which is the form of an infinite series. The type of convergence seen is linear.</ul>
+
+                        </p>
+                        <a href="https://atozmath.com/CONM/Bisection.aspx?q=it" target="_blank"
+                            class="btn btn-outline-primary align-self-center btn-lg mx-auto  ">Calculate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://gist.github.com/RushikeshKothawade07/0bb785ef2ea6a9230e610f3564d5b25e.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

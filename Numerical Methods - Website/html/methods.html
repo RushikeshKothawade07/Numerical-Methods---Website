@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Methods</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" href="../images/programmer.png">
+
+  </head>
+
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="../images/logo.png"
+            width="80px"
+            height="45px"
+            alt="logo-img"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="methods.html">Methods</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Tutorials
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://www.youtube.com/playlist?list=PLZoTAELRMXVNUL99R4bDlVYsncUNvwUBB"
+                    target="_blank"
+                    >Python</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://www.youtube.com/playlist?list=PLjVLYmrlmjGfdIlwG649bdzVHM4iLbD_H"
+                    target="_blank"
+                    >Matlab</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://colab.research.google.com/"
+                target="_blank"
+                >Google Colab</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Upgrade to Pro</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-4">
+      <div class="card">
+        <div class="card-header">Unit I</div>
+        <div class="card-body">
+          <h5 class="card-title">Roots of Equations</h5>
+          <p class="card-text">
+            Roots (or Zeros) of a function f(x) are values of x that produces an
+            output of 0. Roots can be real or complex numbers. Finding the root
+            of {f(x)-g(x)}{f(x)-g(x)} is the same as solving the equation
+            {f(x)=g(x)}f(x)=g(x). Solving an equation is finding the values that
+            satisfy the condition specified by the equation.
+          </p>
+          <ul>
+            <li>Bisection Method</li>
+            <li>Newton Rapson Method</li>
+            <li>Successive Approximation Method</li>
+          </ul>
+          <a href="roots.html" target="_blank" class="btn btn-primary"
+            >Learn more</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">Unit II</div>
+        <div class="card-body">
+          <h5 class="card-title">Simultaneous Equations</h5>
+          <p class="card-text">
+            A key feature of algorithms for solving simultaneous equations is
+            called a “pivoting strategy” that is used to reduce round-off error
+            that occurs in the solutions of these equations.
+          </p>
+          <ul>
+            <li>Gauss Elimination Method</li>
+            <li>Gauss Seidal Method</li>
+            <li>Tri-Diagonal Matrix Method</li>
+          </ul>
+          <a href="simul.html" target="_blank" class="btn btn-primary"
+            >Learn more</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">Unit III</div>
+        <div class="card-body">
+          <h5 class="card-title">Curve Fitting and Interpolation</h5>
+          <p class="card-text">
+            Curve-fitting is when you have a dataset of scattered points and find a line (or curve) that best fits the general shape of the data. Interpolation is when you have two points of data and want to know what a value between the two would be. Half way between would be their average, but if you want to know only a quarter of the way between the two you'd have to interpolate.
+
+          </p>
+          <ul>
+            <li>Newton Forward Differential Equations</li>
+            <li>Lagrange's Algorithm</li>
+          </ul>
+          <a href="curve.html" target="_blank" class="btn btn-primary"
+            >Learn more</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">Unit IV</div>
+        <div class="card-body">
+          <h5 class="card-title">Numerical Integration</h5>
+          <p class="card-text">
+            Numerical integration is the method to calculate the approximate
+            value of the integral by using numerical techniques. There are
+            various useful and interesting methods for numerical integration
+            such as trapezoidal rule, Simpson's rules, Gauss's, Newton-Leibnitz
+            rules etc.
+          </p>
+          <ul>
+            <li>Trapazoidal Rule</li>
+            <li>Simpson's 1/3rd Rule</li>
+            <li>Simpson's 3/8th Rule</li>
+          </ul>
+          <a href="integration.html" target="_blank" class="btn btn-primary"
+            >Learn more</a
+          >
+        </div>
+
+        <!-- 4 -->
+ 
+        <div class="card-header">Unit V</div>
+        <div class="card-body">
+          <h5 class="card-title">Ordinary Differential Equations</h5>
+          <p class="card-text">
+            ODE is a differential equation whose unknowns consists of one (or
+            more) function(s) of one variable and involves the derivatives of
+            those functions. The term ordinary is used in contrast with the term
+            partial differential equation which may be with respect to more than
+            one independent variable.
+          </p>
+          <ul>
+            <li>Euler's Algorithm</li>
+            <li>Range Kutta 4th Order</li>
+          </ul>
+          <a href="ode.html" target="_blank" class="btn btn-primary"
+            >Learn more</a
+          >
+        </div>
+        <div class="card-header">Unit VI</div>
+        <div class="card-body">
+          <h5 class="card-title">Partial Differential Equations</h5>
+          <p class="card-text">
+            Partial differential equations or (PDE) are equations that depend on
+            partial derivatives of several variables. It is a special case of an
+            ordinary differential equation. There are three-types of
+            second-order PDEs in mechanics. They are Elliptic PDE, Parabolic PDE
+            and Hyperbolic PDE.
+          </p>
+          <ul>
+            <li> Laplace Equation</li>
+           
+          </ul>
+          <a href="pde.html" target="_blank" class="btn btn-primary"
+            >Learn more</a
+          >
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Reference - Colab Links</div>
+        <div class="card-body">
+          <h5 class="card-title">Python Programs</h5>
+          <p class="card-text">
+            This notebook contains all the programs for Numerical Methods.
+          </p>
+          <a
+            href="https://colab.research.google.com/drive/15F89IqbQmbKSLEzxAJNM1sv8x73eqfIF?usp=share_link"
+            target="_blank"
+            class="btn btn-primary"
+            >Go to colab</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

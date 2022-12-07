@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Curve Fitting and Interpolation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../images/programmer.png">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="../images/logo.png" width="80px" height="45px" alt="logo-img"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="methods.html">Methods</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Tutorials
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLZoTAELRMXVNUL99R4bDlVYsncUNvwUBB" target="_blank">Python</a></li>
+                      <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLjVLYmrlmjGfdIlwG649bdzVHM4iLbD_H" target="_blank">Matlab</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://colab.research.google.com/" target="_blank">Google Colab</a>  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Upgrade to Pro</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+    <!-- <h3 style="font-size: 30px; text-align:center">Curve Fitting</h3> -->
+
+    <div class="container my-4">
+        <div class="card mb-3" style="max-width: auto; ">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../images/nfdi.jpg" class="img-fluid rounded-start" alt="curve-algo-img">
+                </div>
+                <div class="col-md-8  bg-success p-2" style="--bs-bg-opacity: .1;">
+                    <div class="card-body flex-column d-flex algo-content ">
+                        <h4 class="card-title">Newton Forward Interpolation</h4>
+                        <ul>
+                            <li>Start</li>
+                            <li>Read number of data (n)</li>
+                            <li>Read data points for x and y:
+
+                                For i = 0 to n-1
+                                    Read Xi and Yi,0
+                                Next i</li>
+                            <li>Check whether given point is valid data point or not.    
+                                If it is valid point then get its position at variable index
+                                 
+                                 For i = 0 to n-1
+                                 
+                                     If |xp - Xi| < 0.0001
+                                         index = i
+                                         flag = 1
+                                         break from loop
+                                     End If
+                                     
+                                 Next i </li>
+                            <li>If given calculation point (xp) is not in
+                                x-data then terminate the process.
+                                
+                                 If flag = 0
+                                     Print "Invalid Calculation Point"
+                                     Exit
+                                 End If</li>
+                            <li>Generate forward difference table
+    
+                                For i = 1 to n-1
+                                
+                                    For j = 0 to n-1-i
+                                        Yj,i = Yj+1,i-1 - Yj,i-1
+                                    Next j
+                                    
+                                Next i</li>
+                            <li>Calculate finite difference: h = X1 - X0</li>
+                            <li>Set sum = 0 and sign = 1</li>
+                            <li>Calculate sum of different terms in formula
+                                to find derivatives using Newton's forward 
+                                difference formula:
+                                
+                                 For  i = 1 to n-1-index 
+                                     term = (Yindex, i)i / i
+                                     sum = sum + sign * term
+                                     sign = -sign
+                                 Next i</li>
+                            <li>Divide sum by finite difference (h) to get result
+     
+                                first_derivative = sum/h</li>
+                            <li>Display value of first_derivative</li>
+                            <li>Stop</li>
+
+                        </ul>
+                       
+                        </p>
+                        <a href="https://byjus.com/maths/direct-methods-gaussian-elimination/#:~:text=What%20are%20the%20steps%20of%20the%20Gaussian%20elimination%20method%3F&text=(1)%20Form%20the%20matrices%20A,as%20an%20upper%20triangular%20matrix." target="_blank"
+                            class="btn btn-outline-primary align-self-center btn-lg mx-auto ">Learn
+                            more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://gist.github.com/RushikeshKothawade07/9d6bb5c69e27afffc34b283b3f22279e.js"></script>    <div class="container my-4">
+        <div class="card mb-3" style="max-width: auto; ">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../images/lagrange.jpg" class="img-fluid rounded-start" alt="nrm-algo-img">
+                </div>
+                <div class="col-md-8  bg-success p-2" style="--bs-bg-opacity: .1;">
+                    <div class="card-body flex-column d-flex algo-content ">
+                        <h4 class="card-title">Lagrange Algorithm</h4>
+                        <p class="card-text"><br>
+                        <ul>
+                            <li>Declare the variables and read the order of the matrix n</li>
+                            <li>Read the coefficients aim as
+                                Read the coefficients a[i] for i=1 to n</li>
+                            <li>Read the coefficients b[i] for i=1 to n</li>
+                            <li> Initialize x0[i] = 0 for i=1 to n</li>
+                            <li>Set key=0</li>
+                            <li>For i=1 to n
+                                Set sum = b[i]
+                                For j=1 to n
+                                If (j not equal to i)
+                                Set sum = sum – a[i][j] * x0[j]
+                                Repeat j
+                                x[i] = sum/a[i][i]
+                                If absolute value of ((x[i] – x0[i]) / x[i]) > er, then
+                                Set key = 1
+                                Set x0[i] = x[i]
+                                Repeat i</li>
+                            <li>If key = 1, then
+                                Goto step 6
+                                Otherwise print results</li>
+                        </ul>
+                        <ul>Lagrange Interpolation Formula is used for unequal intervals. </ul>
+
+                        </p>
+                        <a href="https://www.codewithc.com/gauss-seidel-jacobi-method-algorithm-flowchart/" target="_blank"
+                            class="btn btn-outline-primary align-self-center btn-lg mx-auto ">Learn
+                            more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://gist.github.com/RushikeshKothawade07/55cd99466a71ae0fa752e8875b470343.js"></script>
+    
+    <script src="index.js"></script>
+</body>
+
+</html>

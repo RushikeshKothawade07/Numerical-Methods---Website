@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simultaneous Equations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../images/programmer.png">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="../images/logo.png" width="80px" height="45px" alt="logo-img"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="methods.html">Methods</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Tutorials
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLZoTAELRMXVNUL99R4bDlVYsncUNvwUBB" target="_blank">Python</a></li>
+                      <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLjVLYmrlmjGfdIlwG649bdzVHM4iLbD_H" target="_blank">Matlab</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://colab.research.google.com/" target="_blank">Google Colab</a>  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Upgrade to Pro</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    <!-- Simul code  -->
+
+    <!-- <h3 style="font-size: 30px; text-align:center">Simultaneous Equations</h3> -->
+
+    <div class="container my-4">
+        <div class="card mb-3" style="max-width: auto; ">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../images/gem.jpg" class="img-fluid rounded-start" alt="bisection-algo-img">
+                </div>
+                <div class="col-md-8  bg-success p-2" style="--bs-bg-opacity: .1;">
+                    <div class="card-body flex-column d-flex algo-content ">
+                        <h4 class="card-title">Gauss Elimination Algorithm</h4>
+                        <p class="card-text">For any continuous function f(x), <br>
+                        <ul>
+                            <li>Start</li>
+                            <li>Read Number of Unknowns: n</li>
+                            <li>Read Augmented Matrix (A) of n by n+1 Size</li>
+                            <li>Transform Augmented Matrix (A) 
+                                to Upper Trainagular Matrix by Row Operations.</li>
+                            <li>Obtain Solution by Back Substitution.</li>
+                            <li>Display Result.</li>
+                            <li>Stop</li>
+                        </ul>
+                        <ul>Gauss Elimination Method is a procedure for solving systems of linear equation. It is also known as Row Reduction Technique. In this method, the problem of systems of linear equation having n unknown variables, matrix having rows n and columns n+1 is formed. This matrix is also known as Augmented Matrix. After forming n x n+1 matrix, matrix is transformed to upper trainagular matrix by row operations. Finally result is obtained by Back Substitution.</ul>
+                        </p>
+                        <a href="https://atozmath.com/CONM/GaussEli.aspx?q=GEBS2&q1=2%602x%2B5y%3D16%3B3x%2By%3D11%60GEBS2%60%601.25&dm=D&dp=4&do=0" target="_blank"
+                            class="btn btn-outline-primary align-self-center btn-lg mx-auto ">Calculate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://gist.github.com/RushikeshKothawade07/401573675d5f0903738cb877c0892481.js"></script>
+    <!-- //2nd -->
+    <div class="container my-4">
+        <div class="card mb-3" style="max-width: auto; ">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../images/gsm.jpg" class="img-fluid rounded-start" alt="nrm-algo-img">
+                </div>
+                <div class="col-md-8  bg-success p-2" style="--bs-bg-opacity: .1;">
+                    <div class="card-body flex-column d-flex algo-content ">
+                        <h4 class="card-title">Gauss Seidal Algorithm</h4>
+                        <p class="card-text"><br>
+                        <ul>
+                            <li>Declare the variables and read the order of the matrix n</li>
+                            <li>Read the coefficients aim as
+                                Read the coefficients a[i] for i=1 to n</li>
+                            <li>Read the coefficients b[i] for i=1 to n</li>
+                            <li> Initialize x0[i] = 0 for i=1 to n</li>
+                            <li>Set key=0</li>
+                            <li>For i=1 to n
+                                Set sum = b[i]
+                                For j=1 to n
+                                If (j not equal to i)
+                                Set sum = sum – a[i][j] * x0[j]
+                                Repeat j
+                                x[i] = sum/a[i][i]
+                                If absolute value of ((x[i] – x0[i]) / x[i]) > er, then
+                                Set key = 1
+                                Set x0[i] = x[i]
+                                Repeat i</li>
+                            <li>If key = 1, then
+                                Goto step 6
+                                Otherwise print results</li>
+                        </ul>
+                        <ul>In Gauss Seidel method, the most recent values or fresher values are used in successive iterations.</ul>
+
+                        </p>
+                        <a href="https://atozmath.com/CONM/GaussEli.aspx?q=GEBS2&q1=2%602x%2B5y%3D16%3B3x%2By%3D11%60GEBS2%60%601.25&dm=D&dp=4&do=0" target="_blank"
+                            class="btn btn-outline-primary align-self-center btn-lg mx-auto ">Calculate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://gist.github.com/RushikeshKothawade07/437542b9ee81b5d1462b84b7985b6dd0.js"></script>
+       <!-- //3rd -->
+       <div class="container my-4">
+        <div class="card mb-3" style="max-width: auto; ">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../images/tdma.jpg" class="img-fluid rounded-start" alt="nrm-algo-img">
+                </div>
+                <div class="col-md-8  bg-success p-2" style="--bs-bg-opacity: .1;">
+                    <div class="card-body flex-column d-flex algo-content ">
+                        <h4 class="card-title">Thomas / Tri-diagonal Matrix Algorithm</h4>
+                        <p class="card-text"><br>
+                        <ul>
+                            <li> It is essentially an application of gaussian elimination to the banded structure of the matrix.</li>
+                            <li> Similar procedure to gauss Elimination but in this method, non diagonal matrix are assumed to be 0 initially</li>
+                            <li> Respective elements are calculated by using stanard operating procedure</li>
+                            <li> Row elements are changed accordingly</li>
+                            <li> The values of variables are found by back substitution.</li>              
+                        </ul>
+
+                        </p>
+                        <a href="https://planetcalc.com/1959/" target="_blank"
+                            class="btn btn-outline-primary align-self-center btn-lg mx-auto  ">Calculate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://gist.github.com/RushikeshKothawade07/2090e301c4f8955030d4b91d553400b6.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
