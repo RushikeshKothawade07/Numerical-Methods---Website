@@ -5,4 +5,4 @@ Google Colab Link for all python codes : https://colab.research.google.com/drive
 Website hosted on netlify : https://math4u-viit.netlify.app/
 Video Link : https://drive.google.com/drive/folders/15SC91MZri67ROzj90JNAEH1dhYZnWjsn?usp=share_link
 
-Please do provide your valuable feedback !!
+Please do provide your valuable feedback !!!
